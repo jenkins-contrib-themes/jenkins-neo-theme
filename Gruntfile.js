@@ -14,7 +14,8 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     "dist/material-light.css": "less/style.less",
-                    "dist/material-dracula.css": "less/dracula.less"
+                    "dist/material-dracula.css": "less/dracula.less",
+                    "dist/material-aegtheme.css": "less/aegtheme.less"
                 }
             }
         },
@@ -40,6 +41,7 @@ module.exports = function (grunt) {
             minify: {
                 files: {
                     'dist/material-light.css': ['dist/material-light.css'],
+                    'dist/material-aegtheme.css': ['dist/material-aegtheme.css'],
                     'dist/material-dracula.css': ['dist/material-dracula.css']
                 }
             }
