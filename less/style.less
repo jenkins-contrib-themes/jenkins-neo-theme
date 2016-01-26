@@ -93,13 +93,11 @@ a, a:hover, a:visited, a:link {
 #breadcrumbs li:hover,
 A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
   background-color: transparent !important;
-  color: @color-link !important
 }
 
 #breadcrumbs {
-  color: #888 !important;
+  color: @color-text !important;
   text-decoration: none;
-  text-shadow: 0 1px #fff
 }
 
 #disable-project {
@@ -125,7 +123,7 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
   }
 
  .pane-header, .pane-footer {
-  background: #fff;
+  background: @color-bg;
   margin-bottom: 5px;
   border-radius: 0;
   border: 0;
@@ -145,6 +143,10 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
     border-bottom: 2px solid @color-accent-light;
     background-color: transparent;
   }
+}
+
+table.stripped-odd tr:nth-child(odd) {
+  background: darken(@color-bg, 2%);
 }
 
 .tabBar {
@@ -177,6 +179,7 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
 footer {
   padding: 5px 0;
   background-color: @color-footer-bg;
+  border: 0;
 }
 
 #management-links {

@@ -68,6 +68,8 @@ This will generate the following file:
 - dist/neo-light.css
 - dist/neo-dark.css
 
+** Note: Theme neo-dark is WIP **
+
 ## Compatibility
 - Simple Theme plugin 0.3
 - Jenkins 1.636
