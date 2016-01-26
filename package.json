@@ -1,17 +1,19 @@
 {
-  "name": "jenkins-material-theme",
+  "name": "jenkins-neo-theme",
   "version": "0.1.0",
-  "description": "Material design theme for Jenkins",
+  "description": "A modern theme for Jenkins - based on jenkins-material-theme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/afonsof/jenkins-material-theme"
+    "url": "https://github.com/aarjithn/jenkins-neo-theme"
   },
   "keywords": [
-    "material design",
+    "modern theme", 
+    "clean design",
     "jenkins"
   ],
-  "author": "Afonso F",
+  "author": "Aarjith Nandakumar",
   "contributors": [
+    "Afonso F",
     "David Porter",
     "Brady Vitrano"
   ],

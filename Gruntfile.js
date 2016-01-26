@@ -3,46 +3,40 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         clean: {
             dist: {
                 src: ["dist/"]
             }
         },
-
         less: {
             dist: {
                 files: {
-                    "dist/material-light.css": "less/style.less",
-                    "dist/material-dracula.css": "less/dracula.less",
-                    "dist/material-aegtheme.css": "less/aegtheme.less"
+                    "dist/neo-light.css": "less/style.less",
+                    "dist/neo-dark.css": "less/dark.less",
                 }
             }
         },
-
         imageEmbed: {
             light: {
-                src: ["dist/material-light.css"],
-                dest: "dist/material-light.css",
+                src: ["dist/neo-light.css"],
+                dest: "dist/neo-light.css",
                 options: {
                     deleteAfterEncoding: false
                 }
             },
-            dracula: {
-                src: ["dist/material-dracula.css"],
-                dest: "dist/material-dracula.css",
+            dark: {
+                src: ["dist/neo-dark.css"],
+                dest: "dist/neo-dark.css",
                 options: {
                     deleteAfterEncoding: false
                 }
             }
         },
-
         cssmin: {
             minify: {
                 files: {
-                    'dist/material-light.css': ['dist/material-light.css'],
-                    'dist/material-aegtheme.css': ['dist/material-aegtheme.css'],
-                    'dist/material-dracula.css': ['dist/material-dracula.css']
+                    'dist/neo-light.css': ['dist/neo-light.css'],
+                    'dist/neo-dark.css': ['dist/neo-dark.css']
                 }
             }
         },
@@ -58,12 +52,9 @@ module.exports = function (grunt) {
                     dest: 'images/'
                 }]
             }
-
         }
     });
 
     // Default task(s).
     grunt.registerTask('default', ['clean', 'less', 'imageEmbed', 'cssmin']);
-
-
 };

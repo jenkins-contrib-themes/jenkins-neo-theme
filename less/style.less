@@ -4,34 +4,28 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,500,300);
 
 // @font-face {
-//     font-family: "Avenir";
-//     src: url("https://www.aegon.co.uk/etc/clientlibs/aegon/paw/publish/templates/base/fonts/webFonts/AvenirLTW0145Book.woff") format('woff');
+//     font-family: "custom font";
+//     src: url("custom font url.woff") format('woff');
 // }
 
 * {
-  font-family: @font, sans-serif !important;
+  font-family: @font-primary, sans-serif !important;
 }
 
 body, table, form, td, th, p {
   color: @color-text !important;
+  font-size: 14px !important;
 }
 
 body {
-  font-family: @font, sans-serif !important;
-  font-size: 14px !important;
   line-height: 20px !important;
   background-color: @color-bg;
-}
-
-table, form, input, td, th, p, textarea, select {
-  font-size: 14px !important;
 }
 
 a, a:hover, a:visited, a:link {
   text-decoration: none !important;
   color: @color-link;
   &:hover {
-    //opacity: 0.75;
     text-decoration: underline !important;
     color: @color-button-hover !important;
   }
@@ -41,20 +35,32 @@ a, a:hover, a:visited, a:link {
 }
 
 #header {
-  height: 50px;
+  height: 45px;
   background-color: @color-primary;
   text-transform: uppercase;
   z-index: 1030;
   letter-spacing: 1px;
-  padding: 5px 5px;
+  padding: 3px;
+  //Custom logo - path here
+  //background: url('logo.png') no-repeat, @color-primary;
+  //background-size: auto 45px, cover; 
 
   .login {
     top: inherit;
     margin-top: 2px;
-  }
-
-  .login b {
-    font-weight: 400
+    a {
+      font-size: 10px;
+    }
+    a:hover {
+      color: @color-white !important;
+    }
+    b {
+      font-weight: 400;
+    }
+    //Custom logo - hide the default images, but retain the link
+    //#jenkins-home-link img {
+    //  opacity: 0;
+    //}
   }
 
   .searchbox {
@@ -81,10 +87,10 @@ a, a:hover, a:visited, a:link {
 }
 
 .top-sticker-inner {
-  background: none repeat scroll 0 0 @color-white !important;
+  background: none repeat scroll 0 0 @color-sticker-bg !important;
 }
 
-#breadcrumbs LI:hover,
+#breadcrumbs li:hover,
 A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
   background-color: transparent !important;
   color: @color-link !important
@@ -170,7 +176,7 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
 
 footer {
   padding: 5px 0;
-  background-color: #eee;
+  background-color: @color-footer-bg;
 }
 
 #management-links {
@@ -203,7 +209,7 @@ th.pane {
 .bottom-sticker-inner {
   margin: 0 0 0 -15px;
   padding-left: 15px;
-  background: none repeat scroll 0 0 @color-white !important;
+  background: none repeat scroll 0 0 @color-sticker-bg !important;
 }
 
 a#jenkins-home-link {
@@ -277,23 +283,20 @@ td {
       box-shadow: none;
     }
   }
-
 }
 
 .console-output, .console-output * {
   position: relative;
-  font-family: "Courier New", Courier, monospace !important;
-  font-size: 14px;
-  background: @color-black;
-  color: @color-white;
+  font-family: @font-console, Courier, monospace !important;
+  background: @color-console-bg;
+  color: @color-console-text;
   cursor: text;
 }
 
 .console-output {
   padding: 10px 20px;
-
   a {
-    color: @color-white;
+    color: @color-console-text;
     font-weight: bold;
   }
 }
