@@ -2,8 +2,13 @@
 layout: default
 ---
 
-So you love **Jenkins** but hate its ugly user interface and icons... Me too! Introducing **Jenkins Material Theme**.
-You can turn your favorite frog CI tool into a handsome prince in few steps!   
+Beautify your Jenkins with the a modern flat theme!
+
+Website: http://aarjithn.github.io/jenkins-neo-theme
+
+So you love **Jenkins** but hate its ugly user interface and icons... Me too! Introducing **Jenkins Neo Theme**.
+
+This started as a fork to **jenkins-material-theme**, but changed mostly to use a flat and minimalistic design.
  
 ## Features
 * Just one small css file (35K)
@@ -11,46 +16,49 @@ You can turn your favorite frog CI tool into a handsome prince in few steps!
 * Multiple ways to install
 
 ## Screenshots
-![Screen 1](images/screen1.png)   ![Screen 2](images/screen2.png)   ![Screen 3](images/screen3.png)
+![Screen 1](images/screen1.png)
+![Screen 2](images/screen2.png)
+![Screen 3](images/screen3.png)
+![Screen 4](images/screen4.png)
 
 
 ## Installation 
 
-### Using this GitHub page (recommended)
+### Using this GitHub page
 
 1. Install [Jenkins Simple Theme Plugin][simple]
 
-1. Click `Manage Jenkins`
+2. Click `Manage Jenkins`
 
-1. Click `Configure System` and scroll down to `Theme`
+3. Click `Configure System` and scroll down to `Theme`
 
-1. Specify the URL for `http://afonsof.github.io/jenkins-material-theme/dist/material-light.css`.
+4. Specify the URL for `http://aarjithn.github.io/jenkins-neo-theme/dist/neo-light.css`.
 
-1. Click `Save`
+5. Click `Save`
 
 
 ### Using your Jenkins Hosting
 
-1. Upload the file `http://afonsof.github.io/jenkins-material-theme/dist/material-light.css` to your web server
+1. Upload the file `http://aarjithn.github.io/jenkins-neo-theme/dist/neo-light.css` to your web server
 
-1. Follow the steps of the previous method using your uploaded file as URL in step 4
+2. Follow the steps of the previous method using your uploaded file as URL in step 4
 
 
 ### Using Stylish (only you will be able to see the awesome theme)
 
 1. Install the [Stylish Chrome extension][stylish]
 
-1. Copy the content of the file `http://afonsof.github.io/jenkins-material-theme/dist/material-light.css`
+2. Copy the content of the file `http://aarjithn.github.io/jenkins-neo-theme/dist/neo-light.css`
 
-1. Go to Stylish options and click in `Write new style`
+3. Go to Stylish options and click in `Write new style`
 
-1. Paste the theme css in the code box
+4. Paste the theme css in the code box
 
-1. Click in `Specify` and set your jenkins domain
+5. Click in `Specify` and set your jenkins domain
 
-1. Click in `Save`
+6. Click in `Save`
 
-1. Go to your Jenkins website and enable the theme in the Stylish Chrome t  oolbar icon
+7. Go to your Jenkins website and enable the theme in the Stylish Chrome toolbar icon
 
 
 ## Development
@@ -63,7 +71,10 @@ grunt
 ```
 
 This will generate the following file:
-- dist/material-light.css
+
+dist/neo-light.css
+dist/neo-dark.css
+** Note: Theme neo-dark is WIP **
 
 ## Compatibility
 - Simple Theme plugin 0.3
@@ -78,9 +89,11 @@ This will generate the following file:
 If you are experiencing issues please let me know! Also, feel free to contribute!
 
 ## License
-http://afonsof.mit-license.org/
+http://aarjithn.mit-license.org/
+
 
 ##Thanks to
+- [Jenkins material theme][jenkins-material-theme] for the inspiration and original work
 - [Simple Theme Plugin][simple] for the Simple Theme plugin
 - [Google][google] for the the material design inspiration and the icons
 - [Material Design Icons][material-design-icons] for some extra icons
@@ -88,6 +101,7 @@ http://afonsof.mit-license.org/
 - [canon-jenkins][canon-jenkins] for the base theme
 - [@Heldroe][heldroe] for Fiferox and Microsoft support
 
+[jenkins-material-theme]: https://github.com/afonsof/jenkins-material-theme
 [simple]: https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin
 [google]: https://www.google.com/design/spec/material-design/introduction.html
 [material-design-icons]: https://materialdesignicons.com/
