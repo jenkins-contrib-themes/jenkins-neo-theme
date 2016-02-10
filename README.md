@@ -92,7 +92,7 @@ http://aarjithn.mit-license.org/
 - [Material Design Icons][material-design-icons] for some extra icons
 - [Stylish][stylish] for making the test of new versions easy
 - [canon-jenkins][canon-jenkins] for the base theme
-- [@Heldroe][heldroe] for Fiferox and Microsoft support
+- [@Heldroe][heldroe] for Firefox and Microsoft support
 
 [material]: https://github.com/afonsof/jenkins-material-theme
 [simple]: https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin
