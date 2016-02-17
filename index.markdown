@@ -4,7 +4,7 @@ layout: default
 
 Beautify your Jenkins with the a modern flat theme!
 
-Website: http://aarjithn.github.io/jenkins-neo-theme
+Website: http://jenkins-contrib-themes.github.io/jenkins-neo-theme
 
 So you love **Jenkins** but hate its ugly user interface and icons... Me too! Introducing **Jenkins Neo Theme**.
 
@@ -32,14 +32,14 @@ This started as a fork to **jenkins-material-theme**, but changed mostly to use 
 
 3. Click `Configure System` and scroll down to `Theme`
 
-4. Specify the URL for `http://aarjithn.github.io/jenkins-neo-theme/dist/neo-light.css`.
+4. Specify the URL for `http://jenkins-contrib-themes.github.io/jenkins-neo-theme/dist/neo-light.css`.
 
 5. Click `Save`
 
 
 ### Using your Jenkins Hosting
 
-1. Upload the file `http://aarjithn.github.io/jenkins-neo-theme/dist/neo-light.css` to your web server
+1. Upload the file `http://jenkins-contrib-themes.github.io/jenkins-neo-theme/dist/neo-light.css` to your web server
 
 2. Follow the steps of the previous method using your uploaded file as URL in step 4
 
@@ -48,7 +48,7 @@ This started as a fork to **jenkins-material-theme**, but changed mostly to use 
 
 1. Install the [Stylish Chrome extension][stylish]
 
-2. Copy the content of the file `http://aarjithn.github.io/jenkins-neo-theme/dist/neo-light.css`
+2. Copy the content of the file `http://jenkins-contrib-themes.github.io/jenkins-neo-theme/dist/neo-light.css`
 
 3. Go to Stylish options and click in `Write new style`
 
