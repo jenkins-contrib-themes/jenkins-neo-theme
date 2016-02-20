@@ -176,15 +176,28 @@ table.stripped-odd tr:nth-child(odd) {
   }
 }
 
-#buildHistoryPage .build-search-row {
-  input {
-    padding: 5px;
+#buildHistoryPage {
+  .build-search-row {
+    input {
+      padding: 5px;
+    }
+    td {
+      padding: 0;
+    }
+    .clear {
+      padding: 5px 10px;
+      font-size: 1.3em;
+      &:hover {
+        border: 0;
+        background-color: @color-accent-light;
+      }
+    }
   }
-  td {
-    padding: 0;
-  }
-  .clear {
-    padding: 3px 5px;
+
+  .build-row {
+    &.model-link-active {
+      background-color: @color-accent-light;
+    }
   }
 }
 
