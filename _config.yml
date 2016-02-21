@@ -13,7 +13,7 @@ baseurl: ""
 url: "http://aarjith.github.io"
 twitter_username: aarjithn
 github_username:  aarjithn
-github_url: "https://github.com/aarjithn/jenkins-neo-theme"
+github_url: "https://github.com/jenkins-contrib-themes/jenkins-neo-theme"
 
 # Build settings
 markdown: kramdown
