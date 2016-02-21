@@ -187,16 +187,20 @@ table.stripped-odd tr:nth-child(odd) {
     .clear {
       padding: 5px 10px;
       font-size: 1.3em;
+      top: 0;
+      right: 0;
       &:hover {
         border: 0;
         background-color: @color-accent-light;
+        top: 0px;
+        padding-right: 10px;
       }
     }
   }
 
   .build-row {
     &.model-link-active {
-      background-color: @color-accent-light;
+      background-color: @color-accent-light !important;
     }
   }
 }
