@@ -1,6 +1,7 @@
+@import '../node_modules/jenkins-core-theme/less/functions';
+@import '../node_modules/jenkins-core-theme/less/images';
+@import '../node_modules/jenkins-core-theme/less/codemirror';
 @import 'variables';
-@import 'functions';
-@import 'images';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,500,300);
 
 // @font-face {
@@ -81,16 +82,12 @@ h3 {
 
   #search-box {
     background: darken(@color-primary, 10%);
-    padding: 18px 15px;
+    padding-left: 5px;
     border-radius: 3px;
-    height: 26px;
+    height: 34px;
     border: 0;
     box-shadow: none;
     color: @color-white;
-  }
-
-  .icon-help {
-    .icon-img('../images/ic_help_outline_black.svg', @color-white);
   }
 }
 
@@ -324,17 +321,22 @@ td {
 .console-output, .console-output * {
   position: relative;
   font-family: @font-console, Courier, monospace !important;
-  background: @color-console-bg;
-  color: @color-console-text;
+  background: @console-black;
+  color: @console-white;
   cursor: text;
 }
 
 .console-output {
   padding: 10px 20px;
   a {
-    color: @color-console-text;
+    color: @console-white;
     font-weight: bold;
   }
+}
+
+.jenkins_ver:after {
+  margin-left: 15px;
+  content: 'jenkins-neo-theme v. @@version'
 }
 
 [style^="color:gray"] {
