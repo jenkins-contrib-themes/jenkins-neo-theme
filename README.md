@@ -33,9 +33,9 @@ This started as a fork to **jenkins-material-theme**, but changed mostly to use 
 
 ### Using your Jenkins Hosting
 
-1. Upload the file `http://jenkins-contrib-themes.github.io/jenkins-neo-theme/dist/neo-light.css` to your web server
+1. Upload the file `http://jenkins-contrib-themes.github.io/jenkins-neo-theme/dist/neo-light.css` to the `userContent` folder in the jenkins home directory.
 
-1. Follow the steps of the previous method using your uploaded file as URL in step 4
+1. Follow the steps of the previous method using `/userContent/neo-light.css` as the url
 
 
 ### Using Stylish (only you will be able to see the awesome theme)
