@@ -64,6 +64,18 @@
   animation: rotating 2s linear infinite;
 }
 
+.icon-star, [src$='/star.png'] {
+  .icon-img('../images/heart.svg', @color-grey);
+}
+
+[src$='/star-gold.png'] {
+  .icon-img('../images/heart.svg', @color-red);
+}
+
+[src$='/star.png'], [src$='/star-gold.png'] {
+  .icon(@size-md);
+}
+
 [src$='/shelve-project-icon.png'] {
   .icon(@size-md);
   .icon-img('../images/package-variant.svg', @color-grey);
