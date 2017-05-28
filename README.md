@@ -26,7 +26,7 @@ This started as a fork to **jenkins-material-theme**, but changed mostly to use 
 
 1. Click `Configure System` and scroll down to `Theme`
 
-1. Specify the URL for `http://jenkins-contrib-themes.github.io/jenkins-neo-theme/dist/neo-light.css`.
+1. Specify the URL for `https://jenkins-contrib-themes.github.io/jenkins-neo-theme/dist/neo-light.css`.
 
 1. Click `Save`
 
