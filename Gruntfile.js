@@ -52,9 +52,19 @@ module.exports = function (grunt) {
                     dest: 'images/'
                 }]
             }
+        },
+        watch: {
+            styles: {
+                files: ['**/*.less'],
+                tasks: ['less', 'cssmin'],
+                options: {
+                  spawn: false,
+                }
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
     // Default task(s).
     grunt.registerTask('default', ['clean', 'less', 'imageEmbed', 'cssmin']);
 };

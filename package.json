@@ -7,7 +7,7 @@
     "url": "https://github.com/aarjithn/jenkins-neo-theme"
   },
   "keywords": [
-    "modern theme", 
+    "modern theme",
     "clean design",
     "jenkins"
   ],
@@ -28,6 +28,7 @@
     "grunt-contrib-jshint": "^0.6.5",
     "grunt-contrib-less": "^1.1.0",
     "grunt-contrib-uglify": "^0.2.7",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-image-embed": "^0.3.3",
     "grunt-rev": "^0.1.0",
     "install": "^0.3.0",
