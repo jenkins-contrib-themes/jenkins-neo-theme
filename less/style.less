@@ -1,20 +1,20 @@
-@import 'variables';
-@import 'functions';
-@import 'images';
+@import "variables";
+@import "functions";
+@import "images";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,500,300);
-
-// @font-face {
-//     font-family: "custom font";
-//     src: url("custom font url.woff") format('woff');
-// }
 
 * {
   font-family: @font-primary, sans-serif !important;
 }
 
-body, table, form, td, th, p {
+body,
+table,
+form,
+td,
+th,
+p {
   color: @color-text !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
 }
 
 body {
@@ -22,28 +22,20 @@ body {
   background-color: @color-bg;
 }
 
-a, a:hover, a:visited, a:link {
+pre {
+  font-family: monospace !important;
+}
+
+a,
+a:hover,
+a:visited,
+a:link {
+  font-size: 12px;
   text-decoration: none !important;
   color: @color-link;
   &:hover {
-    text-decoration: underline !important;
-    color: @color-button-hover !important;
+    color: @color-link-hover !important;
   }
-}
-
-h2 {
-    margin-bottom: 0px;
-    margin-top: 2em;
-    font-weight: normal;
-}
-
-h3 {
-    color: #c9851d;
-    font-size: 3em;
-    font-weight: normal;
-}
-
-#page-body {
 }
 
 #header {
@@ -53,9 +45,6 @@ h3 {
   z-index: 1030;
   letter-spacing: 1px;
   padding: 3px;
-  //Custom logo - path here
-  //background: url('logo.png') no-repeat, @color-primary;
-  //background-size: auto 45px, cover; 
 
   .login {
     top: inherit;
@@ -69,29 +58,31 @@ h3 {
     b {
       font-weight: 400;
     }
-    //Custom logo - hide the default images, but retain the link
-    //#jenkins-home-link img {
-    //  opacity: 0;
-    //}
   }
 
   .searchbox {
     padding: 2px 10px;
   }
 
-  #search-box {
-    background: darken(@color-primary, 10%);
-    padding: 18px 15px;
-    border-radius: 3px;
-    height: 26px;
-    border: 0;
-    box-shadow: none;
-    color: @color-white;
-  }
-
   .icon-help {
-    .icon-img('../images/ic_help_outline_black.svg', @color-white);
+    .icon-img("../images/ic_help_outline_black.svg", @color-white);
   }
+}
+
+select,
+input,
+.CodeMirror-scroll {
+  color: @color-text !important;
+  background: darken(@color-primary, 10%) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.build-search-row input,
+#search-box {
+  padding: 17px 15px;
+  border-radius: 3px;
+  height: 26px;
 }
 
 #breadcrumbBar {
@@ -109,78 +100,185 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
 
 #breadcrumbs {
   color: @color-text !important;
+  background-color: @color-accent-light;
   text-decoration: none;
+  border-bottom: none !important;
+  LI A:link,
+  LI A:visited {
+    color: @color-text !important;
+  }
+}
+
+#pipeline-box .table-box {
+  .table-viewPort {
+    border: none !important;
+
+    .stage-start .cell-box {
+      .stage-start-time {
+        background-color: transparent !important;
+        border: none !important;
+        .date {
+          background-color: transparent !important;
+        }
+      }
+      .changeset-box {
+        text-shadow: none !important;
+      }
+    }
+
+    tr.totals .stage-start .cell-color {
+      color: @color-text !important;
+    }
+  }
+
+  tr td {
+    text-shadow: none !important;
+  }
+
+  td {
+    &.SUCCESS .cell-color .stage-wrapper {
+      background-color: @color-green !important;
+    }
+    &.FAILED .cell-color .stage-wrapper {
+      background-color: @color-red !important;
+    }
+    .cell-color {
+      background-color: none;
+      .stage-wrapper {
+        border: none;
+        color: @color-black;
+        div span {
+          opacity: 1 !important;
+          font-size: 1em !important;
+          text-shadow: none !important;
+          font-weight: normal !important;
+        }
+        .status {
+          text-shadow: none;
+          color: @color-black;
+          font-weight: normal;
+        }
+      }
+    }
+  }
 }
 
 #disable-project {
   float: right;
 }
 
-#notification-bar{
+#notification-bar {
   height: 50px !important;
 }
 
-#executors .pane-content > table tr td:first-child {
-  color: #aaa !important;
-  font-weight: bold;
-  font-size: 1.3em !important;
-  text-align: center;
+#executors .pane-content > table tr {
+  td:first-child {
+    color: #aaa !important;
+    font-weight: bold;
+    font-size: 1.3em !important;
+    text-align: center;
+  }
+  td:nth-child(3) {
+    display: none;
+  }
 }
 
 .pane-frame {
-  border: 0;
-  
-  &:hover, &.mouseover {
-    border: 0 !important;
+  border: @table-border;
+  border-radius: 0;
+
+  &:hover,
+  &.mouseover {
+    border: @table-border !important;
   }
 
- .pane-header, .pane-footer {
-  background: @color-bg;
-  margin-bottom: 5px;
-  border-radius: 0;
-  border: 0;
- }
-
- .pane-header {
-  border-bottom: 2px solid @color-accent-light;
- }
-
- .single-line:hover, .single-line.model-link-active {
-  background: @color-accent-light !important;
- }
+  .single-line:hover,
+  .single-line.model-link-active {
+    background: @color-accent-light !important;
+  }
 }
 
 .bigtable {
-  th  {
-    border-bottom: 2px solid @color-accent-light;
-    background-color: transparent;
+  tr {
+    border-color: @table-header-color;
+  }
+  th {
+    border-bottom: none !important;
+    background-color: @color-accent-light;
   }
 }
 
-table.stripped-odd tr:nth-child(odd) {
+.pane-header,
+.pane-footer {
+  color: @color-text;
+  background-color: @table-header-color;
+  border-radius: 0;
+  border: 0;
+}
+
+.pane-header {
+  border-bottom: 2px solid @table-header-color;
+}
+
+table.stripped-odd tr:nth-child(odd),
+table.stripped tr:nth-child(even) {
   background: darken(@color-bg, 2%);
+}
+
+table.stripped,
+table.stripped-even,
+table.stripped-odd {
+  tr:hover {
+    background: lighten(@color-bg, 2%) !important;
+  }
+}
+
+table.sortable {
+  a.sortheader {
+    color: lighten(@color-accent-light, 50%);
+  }
+}
+
+table.parameters {
+  tbody:hover {
+    background-color: @color-accent-light;
+  }
 }
 
 .tabBar {
   .tab {
+    background: @tab-inactive-background;
     &:first-child {
       margin-left: 0;
     }
     &.active a {
-      background: @color-accent-light;
+      background: @tab-active-background;
     }
     a {
+      border: @table-border !important;
+      border-bottom: none !important;
       padding: 5px 10px;
-      border-radius: 0; 
+      border-radius: 0;
+      color: @color-text !important;
+      &:hover {
+        background: lighten(@tab-active-background, 10%);
+      }
     }
+  }
+}
+
+#projectstatus {
+  tbody tr:first-child th:first-child,
+  tbody tr:first-child th:last-child {
+    border-radius: 0;
+  }
+  .header {
+    border: none;
   }
 }
 
 #buildHistoryPage {
   .build-search-row {
-    input {
-      padding: 5px;
-    }
     td {
       padding: 0;
     }
@@ -214,7 +312,7 @@ footer {
 #management-links {
   padding-left: 0 !important;
   a {
-    margin-right: 10px; 
+    margin-right: 10px;
     font-weight: 600;
   }
   tr {
@@ -235,7 +333,7 @@ th.pane {
 }
 
 .bottom-sticker-edge {
-  display: none
+  display: none;
 }
 
 .bottom-sticker-inner {
@@ -268,30 +366,34 @@ table.progress-bar {
 }
 
 td {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .ygtvlabel,
 .ygtvlabel:link,
 .ygtvlabel:visited,
 .ygtvlabel:hover {
-  background-color: transparent !important
+  background-color: transparent !important;
 }
 
 .yuimenuitemlabel {
   outline: none;
 }
 
+#main-panel > div {
+  background-color: transparent !important;
+}
+
 #main-panel-content > div:nth-child(2) {
-  background-color: transparent !important
+  background-color: transparent !important;
 }
 
 #jenkins .yui-button {
   button {
     text-decoration: none;
     text-align: center;
-    letter-spacing: .5px;
-    transition: .1s ease-out;
+    letter-spacing: 0.5px;
+    transition: 0.1s ease-out;
     cursor: pointer;
     border: none !important;
     border-radius: 3px;
@@ -317,16 +419,63 @@ td {
   }
 }
 
+.jenkins-config-widgets .form-config.tabBarFrame {
+  border-bottom: 5px solid @tab-inactive-background !important;
+  .tabBar {
+    .tab.active,
+    .tab:hover {
+      color: @color-text !important;
+      background-color: @tab-active-background !important;
+      border-color: @tab-active-background !important;
+    }
+  }
+}
+
+.bottom-sticker-inner {
+  border: none !important;
+  padding-left: 36px !important;
+  background: @color-accent-light !important;
+}
+
+.jenkins-config-widgets
+  .form-config.tabBarFrame
+  .tabBar
+  .tab:hover
+  .jenkins-config
+  table
+  .section-header {
+  border-top: 1px solid @tab-inactive-background !important;
+}
+
+.jenkins-config,
+.jenkins-config-widgets {
+  background-color: @tab-active-background !important;
+  border-color: @table-border-color !important;
+}
+
 #enable-project .yui-button {
   vertical-align: middle;
 }
 
-.console-output, .console-output * {
+.ace-tomorrow,
+.console-output,
+.console-output * {
   position: relative;
   font-family: @font-console, Courier, monospace !important;
   background: @color-console-bg;
   color: @color-console-text;
   cursor: text;
+}
+
+.ace-tomorrow {
+  .ace_gutter {
+    color: @color-text;
+    background: @table-header-color;
+  }
+  .ace_gutter-active-line,
+  .ace_active-line {
+    background: darken(@table-header-color, 5%) !important;
+  }
 }
 
 .console-output {
@@ -347,10 +496,103 @@ td {
 
 // make headings on the config pages easier to read
 .section-header {
-    font-size: 2em;
-    border-bottom: none !important;
-    font-weight: lighter !important;
-    margin-bottom: 0.2em;
-    margin-top: 1.5em !important;
-    padding-bottom: 3px;
+  font-size: 2em;
+  border-bottom: none !important;
+  font-weight: lighter !important;
+  margin-bottom: 0.2em;
+  margin-top: 1.5em !important;
+  padding-bottom: 3px;
 }
+
+.sonar-qg,
+.sonar-ce {
+  color: @color-text !important;
+  font-size: 12px !important;
+  font-weight: normal !important;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#jenkins .yuimenu .bd {
+  border: 1px solid @table-border-color;
+  box-shadow: none;
+}
+
+.yui-skin-sam {
+  .yuimenuitemlabel {
+    color: @color-text !important;
+  }
+  .yuimenu .bd {
+    background-color: @tab-active-background;
+  }
+  .yuimenuitem-selected {
+    background-color: @tab-inactive-background;
+  }
+}
+
+.cbwf-popover .alert {
+  background-color: @tab-inactive-background!important;
+  text-shadow: none !important;
+  color: @color-text !important;
+}
+
+.cbwf-dialog {
+  border: 0;
+  background-color: @table-header-color !important;
+  .header {
+    background-color: @table-header-color !important;
+  }
+}
+
+.cbwf-stage-logs {
+  .log-details {
+    background-color: @table-header-color !important;
+    > div {
+      background-color: @tab-inactive-background !important;
+    }
+    .console-output {
+      border: 0 !important;
+      color: @color-text !important;
+    }
+  }
+  .node-name{
+    background-color: @color-red !important;
+    border-radius: 0% !important;
+    color: @color-primary !important;
+    a {
+      color: @color-primary !important;
+    }
+  }
+  .node-log-frame.FAILED .node-name {
+    background-color: @color-red !important;
+  }
+}
+
+.cbwf-widget {
+  .alert-danger {
+    border-color: @color-red !important;
+    .btn {
+      background: @color-red !important;
+    }
+  }
+
+  // This breaks the layout, so hiding it'Glyphicons Halflings' !important
+  .label-danger {
+    display: none !important;
+  }
+
+  .alert-success {
+    border-color: @color-green !important;
+    .btn {
+      background: @color-green !important;
+    }
+  }
+
+  .glyphicon {
+    font-family: "Glyphicons Halflings" !important;
+  }
+}
+

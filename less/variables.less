@@ -16,8 +16,9 @@
 @color-primary: #0172BA;
 @color-accent-light: #B3D4FF;
 @color-link: #34568E;
+@color-link-hover: #0172BA;
 @color-button: #36578C;
-@color-button-hover: #0172BA;
+@color-button-hover: @color-link-hover;
 @color-button-active: #FFCC53;
 
 @color-bg: @color-white;
@@ -32,3 +33,12 @@
 /* Font */
 @font-primary: 'Open Sans';
 @font-console: 'Courier New';
+
+
+
+@table-header-color: @color-accent-light;
+@table-border: 1px solid @table-border-color;
+@table-border-color: @table-header-color;
+
+@tab-active-background: @table-header-color;
+@tab-inactive-background: #2D2D2D;

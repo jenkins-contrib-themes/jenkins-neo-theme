@@ -7,6 +7,7 @@
   @data-uri: data-uri("image/svg+xml;charset=UTF-8", '@{url-new}');
   @new-uri: replace("@{data-uri}", "@{encoded-default}", "@{encoded-white}");
   background-image: e(@new-uri);
+  content: url('data:image/gif;base64,R0lGODlhAQABAPAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 }
 
 .icon(@size) { // outer mixin
